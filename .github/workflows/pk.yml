@@ -6,4 +6,15 @@ jobs:
   my_job:
     name: deploy to staging
     runs-on: ubuntu-22.04   
-    
+    steps:
+      - name: Login to Azure
+        uses: hyperskill/azure-login@v3.0.0
+        with:
+          # Azure client id
+          client_id: 3f02b9f2-7063-4b44-9d75-937262d625b9
+          # Azure client secret
+          client_secret: 58b359ef-3463-4c39-ad84-546da3b7b086
+          # Azure subscription id
+          subscription_id: dd2fe2ae-28d1-4517-b12b-b56258ece7d8
+          # Azure tenant id
+          tenant_id: d82f5415-32ab-48fc-83f8-6a2b5b8df728
